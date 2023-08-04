@@ -1,5 +1,0 @@
-print("Welcome to the body mass index calculator")
-height = float(input("Enter Your Height in m: "))
-weight = float(input("Enter your weight in KG: "))
-result = weight / (height * height)
-print(f"your BMI is: {int(result)}")
