@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% block title %}
+    Enrollment
+{% endblock %}
+
+{% block content %}
+    <h1>Enrollment</h1>
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <!-- Your Columns HERE -->
+                <th scope="col">Course Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Duration in month</th>
+                <th scope="col">Payment</th>
+                <th scope="col">Enroll</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Your rows inside the table HERE: -->
+            {% for course in courses %}
+                <tr>
+                    <td>{{ course.id }}</td>
+                    <td>{{ course.name }}</td>
+                    <td>{{ course.duration_in_month }}</td>
+                    <td>{{ course.payment }}</td>
+                    <td>
+                        <button class="btn btn-outline btn-success">Tap to enroll</button>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
